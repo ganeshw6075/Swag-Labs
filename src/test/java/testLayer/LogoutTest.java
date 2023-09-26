@@ -8,14 +8,16 @@ import testBase.TestBase;
 import utilities.TestListener;
 
 
-public class LoginTest extends TestBase {
-    @Test(priority=1)
-	public void verifyLogin()
+public class LogoutTest extends TestBase {
+ @Test(priority=2)
+	public void VerifyLogout()
 	{
 		lp.enterTxtUsername();
 		lp.enterTxtPassword();
 		lp.clickLoginBtn();
+		hp.clickOnOpenMenu();
+		hp.clickOnLogoutBtn();
 		
-		Assert.assertEquals(util.getPageTitle(),"Swag Labs");
+		Assert.assertEquals(util.getCurrentUrl(),"https://www.saucedemo.com/v1/index.html");
 	}
 }

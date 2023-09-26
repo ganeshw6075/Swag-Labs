@@ -11,7 +11,7 @@ public class TestListener extends TestBase implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		
-		System.out.println("Testcase Execution start : " + result.getTestName());
+		System.out.println("Testcase Execution start : " + result.getName());
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class TestListener extends TestBase implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		
+	
 	}
 
 	@Override

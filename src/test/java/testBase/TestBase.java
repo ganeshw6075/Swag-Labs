@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-
+import pageLayer.HomePage;
 import pageLayer.LoginPage;
 import utilities.Util;
 
@@ -19,6 +19,7 @@ public class TestBase {
     public static WebDriver driver;
     public static Util util;
     public static LoginPage lp;
+    public static HomePage hp;
     public String br="chrome";
     @BeforeMethod
     public void setUp()
@@ -47,6 +48,7 @@ public class TestBase {
     	
     	
     	 lp=new LoginPage(driver);
+    	 hp=new HomePage(driver);
     	 util=new Util();
 	}
     
